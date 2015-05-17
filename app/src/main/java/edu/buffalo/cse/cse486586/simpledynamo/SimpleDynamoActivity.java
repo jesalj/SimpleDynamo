@@ -13,6 +13,17 @@ public class SimpleDynamoActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_simple_dynamo);
+
+        /*String strReceived = strings[0].trim();
+          ContentValues storeMsg = new ContentValues();
+          storeMsg.put("key", Integer.toString(msgId));
+          storeMsg.put("value", strReceived);
+          msgId = msgId + 1;
+
+          insert(providerUri, storeMsg);
+
+          TextView textView1 = (TextView) findViewById(R.id.textView1);
+          textView1.append(strReceived + "\t\n");*/
     
 		TextView tv = (TextView) findViewById(R.id.textView1);
         tv.setMovementMethod(new ScrollingMovementMethod());
@@ -26,6 +37,7 @@ public class SimpleDynamoActivity extends Activity {
 	}
 	
 	public void onStop() {
+        super.onStop();
 	    Log.v("Test", "onStop()");
 	}
 
